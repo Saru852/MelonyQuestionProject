@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ทำแบบทดสอบเสร็จสิ้น</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      margin: 20px auto;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      // อ่านเวลาเริ่มจาก sessionStorage
+      let start = sessionStorage.getItem("startTime");
+      if (start) {
+        let end = new Date().getTime();
+        let diff = Math.floor((end - start) / 1000); // วินาที
+        document.getElementById("time").textContent = diff + " วินาที";
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>ยินดีด้วยที่ตอบคำถามจนจบแล้ว</h2>
+  <p>เวลาที่ใช้ทำ: <span id="time"></span></p>
+  <button onclick="location.href='index.html'">กลับไปหน้าแรก</button>
+</body>
+</html>

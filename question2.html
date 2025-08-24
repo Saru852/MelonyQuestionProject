@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>คำถามที่ 2</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .box {
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    form {
+      margin-top: 20px;
+    }
+    @media (max-width: 600px) {
+      button {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+    <h2>คำถามที่ 2</h2>
+    <p>คำถาม: เพลงแรกที่เมลแต่งคือเพลง?</p>
+    <form action="question3.html" onsubmit="return checkAnswer()">
+      <label><input type="radio" name="answer" value="correct" required> ไปต่างโลก</label><br>
+      <label><input type="radio" name="answer" value="wrong"> กุหลาบหมายจันทร์</label><br>
+      <label><input type="radio" name="answer" value="wrong"> กอดฉันที</label><br>
+      <label><input type="radio" name="answer" value="wrong"> รักแล้วพบ</label><br><br>
+      <button type="submit">ถัดไป</button>
+    </form>
+  </div>
+  <script>
+    function checkAnswer() {
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (!selectedAnswer) {
+        return false; // ไม่ส่งฟอร์ม ถ้ายังไม่เลือกคำตอบ
+      }
+  
+      if (selectedAnswer.value === 'wrong') {
+        // เปลี่ยนหน้าแบบไม่ต้อง alert
+        window.location.href = 'question1.html';
+        return false; // หยุดส่งฟอร์ม
+      }
+  
+      return true; // ตอบถูก ไปหน้าถัดไป
+    }
+  </script>  
+</body>
+</html>
