@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>คำถามที่ 20</title>
+  <style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .box {
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: left; 
+      font-size: 20px;  
+    }
+    h2 {
+      text-align: center; 
+      font-size: 26px; 
+    }
+    p {
+      font-size: 25px; 
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 23px; 
+    }
+    button {
+      padding: 14px 24px;
+      font-size: 20px; 
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+    <h2>คำถามที่ 20</h2>
+    <p>คำถาม: ฉายาที่พวกท่านพี่เรียกเมลมากที่สุดคือ?</p>
+    <form action="complete.html" onsubmit="return checkAnswer()">
+      <label><input type="radio" name="answer" value="wrong" required> เมลเหลี่ยม</label><br>
+      <label><input type="radio" name="answer" value="wrong"> เด็กสถาปัด</label><br>
+      <label><input type="radio" name="answer" value="correct"> เด็กดื้อ</label><br>
+      <label><input type="radio" name="answer" value="wrong"> เด็กติดเกม</label><br><br>
+      <button type="submit" onclick="stopTimer()">ส่งคำตอบ</button>
+    </form>
+  </div>
+
+  <script>
+    function stopTimer() {
+      const startTime = sessionStorage.getItem('startTime');
+      const endTime = Date.now();
+      const timeSpent = Math.floor((endTime - startTime) / 1000);  // คำนวณเวลาเป็นวินาที
+      sessionStorage.setItem('timeSpent', timeSpent);  // เก็บเวลาใน sessionStorage
+    }
+    function checkAnswer() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (!selectedAnswer) {
+      return false; // ไม่ส่งฟอร์ม ถ้ายังไม่เลือกคำตอบ
+    }
+
+    if (selectedAnswer.value === 'wrong') {
+      // เปลี่ยนหน้าแบบไม่ต้อง alert
+      window.location.href = 'question1.html';
+      return false; // หยุดส่งฟอร์ม
+    }
+
+    return true; // ตอบถูก ไปหน้าถัดไป
+  }
+</script>
+</body>
+</html>

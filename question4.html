@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>คำถามที่ 4</title>
   <style>
-    body {
+  body {
       font-family: 'Arial', sans-serif;
       background-color: #f0f8ff;
       margin: 0;
@@ -25,28 +25,38 @@
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
+      text-align: left; 
+      font-size: 20px;  
+    }
+    h2 {
+      text-align: center; 
+      font-size: 26px; 
+    }
+    p {
+      font-size: 25px; 
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 23px; 
     }
     button {
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 14px 24px;
+      font-size: 20px; 
       background-color: #4CAF50;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       width: 100%;
+      margin-top: 15px;
     }
     button:hover {
       background-color: #45a049;
     }
     form {
       margin-top: 20px;
-    }
-    @media (max-width: 600px) {
-      button {
-        padding: 10px 20px;
-      }
     }
   </style>
 </head>
@@ -57,9 +67,9 @@
     <p>คำถาม: ส่วนสูงของเมลเท่าไร?</p>
     <form action="question5.html" onsubmit="return checkAnswer()">
       <label><input type="radio" name="answer" value="correct" required> 161</label><br>
-      <label><input type="radio" name="answer" value="wrong"> 154</label><br>
-      <label><input type="radio" name="answer" value="wrong"> 142</label><br>
-      <label><input type="radio" name="answer" value="wrong"> 170</label><br><br>
+      <label><input type="radio" name="answer" value="wrong"> 165</label><br>
+      <label><input type="radio" name="answer" value="wrong"> 160</label><br>
+      <label><input type="radio" name="answer" value="wrong"> 171</label><br><br>
       <button type="submit">ถัดไป</button>
     </form>
   </div>

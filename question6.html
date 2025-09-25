@@ -2,9 +2,9 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>คำถามที่ 4</title>
+  <title>คำถามที่ 6</title>
   <style>
-    body {
+  body {
       font-family: 'Arial', sans-serif;
       background-color: #f0f8ff;
       margin: 0;
@@ -25,28 +25,38 @@
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
+      text-align: left; 
+      font-size: 20px;  
+    }
+    h2 {
+      text-align: center; 
+      font-size: 26px; 
+    }
+    p {
+      font-size: 25px; 
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 23px; 
     }
     button {
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 14px 24px;
+      font-size: 20px; 
       background-color: #4CAF50;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       width: 100%;
+      margin-top: 15px;
     }
     button:hover {
       background-color: #45a049;
     }
     form {
       margin-top: 20px;
-    }
-    @media (max-width: 600px) {
-      button {
-        padding: 10px 20px;
-      }
     }
   </style>
 </head>
@@ -56,9 +66,9 @@
     <h2>คำถามที่ 6</h2>
     <p>คำถาม: สีที่เมลชอบคือ?</p>
     <form action="question7.html" onsubmit="return checkAnswer()">
-      <label><input type="radio" name="answer" value="wrong" required> น้ำเงิน</label><br>
-      <label><input type="radio" name="answer" value="wrong"> เขียว</label><br>
-      <label><input type="radio" name="answer" value="wrong"> เหลือง</label><br>
+      <label><input type="radio" name="answer" value="wrong" required> ฟ้าทะเล</label><br>
+      <label><input type="radio" name="answer" value="wrong"> ม่วง</label><br>
+      <label><input type="radio" name="answer" value="wrong"> ชมพู</label><br>
       <label><input type="radio" name="answer" value="correct"> แดง</label><br><br>
       <button type="submit">ถัดไป</button>
     </form>
