@@ -6,7 +6,8 @@
   <style>
   body {
       font-family: 'Arial', sans-serif;
-      background-color: #f0f8ff;
+      background: url('BG/BGPJ.jpg') no-repeat center center fixed; 
+      background-size: cover; 
       margin: 0;
       padding: 0;
     }
@@ -64,12 +65,12 @@
   <div class="container">
   <div class="box">
     <h2>คำถามที่ 18</h2>
-    <p>คำถาม: เมลชอบกลิ่นครีมกันแดดอะไร?</p>
+    <p>คำถาม: ชื่อไลฟ์กองโจรของเมลชื่ออะไร?</p>
     <form action="question19.html" onsubmit="return checkAnswer()">
-      <label><input type="radio" name="answer" value="wrong" required> ข้าว</label><br>
-      <label><input type="radio" name="answer" value="correct"> สปอต</label><br>
-      <label><input type="radio" name="answer" value="wrong"> เลม่อน</label><br>
-      <label><input type="radio" name="answer" value="wrong"> ส้ม</label><br><br>
+      <label><input type="radio" name="answer" value="wrong" required> กองเปิ้ล</label><br>
+      <label><input type="radio" name="answer" value="correct"> กองคาราเมล</label><br>
+      <label><input type="radio" name="answer" value="wrong"> กองเหมียวๆ</label><br>
+      <label><input type="radio" name="answer" value="wrong"> กองหัสกี</label><br><br>
       <button type="submit">ถัดไป</button>
     </form>
   </div>
@@ -77,16 +78,16 @@
     function checkAnswer() {
       const selectedAnswer = document.querySelector('input[name="answer"]:checked');
       if (!selectedAnswer) {
-        return false; // ไม่ส่งฟอร์ม ถ้ายังไม่เลือกคำตอบ
+        return false; 
       }
   
       if (selectedAnswer.value === 'wrong') {
-        // เปลี่ยนหน้าแบบไม่ต้อง alert
+        
         window.location.href = 'question1.html';
-        return false; // หยุดส่งฟอร์ม
+        return false; 
       }
   
-      return true; // ตอบถูก ไปหน้าถัดไป
+      return true; 
     }
   </script>  
 </body>

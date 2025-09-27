@@ -6,7 +6,8 @@
   <style>
   body {
       font-family: 'Arial', sans-serif;
-      background-color: #f0f8ff;
+      background: url('BG/BGPJ.jpg') no-repeat center center fixed; 
+      background-size: cover; 
       margin: 0;
       padding: 0;
     }
@@ -77,16 +78,16 @@
     function checkAnswer() {
       const selectedAnswer = document.querySelector('input[name="answer"]:checked');
       if (!selectedAnswer) {
-        return false; // ไม่ส่งฟอร์ม ถ้ายังไม่เลือกคำตอบ
+        return false; 
       }
   
       if (selectedAnswer.value === 'wrong') {
-        // เปลี่ยนหน้าแบบไม่ต้อง alert
+        
         window.location.href = 'question1.html';
-        return false; // หยุดส่งฟอร์ม
+        return false; 
       }
   
-      return true; // ตอบถูก ไปหน้าถัดไป
+      return true; 
     }
   </script>  
 </body>

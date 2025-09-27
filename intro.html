@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>คำชี้แจง</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Tahoma, sans-serif;
-      margin-top: 80px;
+      font-family: 'Arial', sans-serif;
+      background: url('BG/BGPJ.jpg') no-repeat center center fixed; 
+      background-size: cover; 
+      margin: 0;
+      padding: 0;
+    }
+    .container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .box {
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: left; 
+      font-size: 20px;
     }
     h2 {
       color: #333;
       text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
     }
     p {
       font-size: 20px;
-      margin: 20px auto;
-      width: 60%;
       line-height: 1.6;
-      text-align: left;
+      margin-bottom: 25px;
     }
     .button-group {
       display: flex;
-      gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+      gap: 10px;
+      justify-content: center; 
       margin-top: 20px;
     }
     button {
-      padding: 10px 20px;
+      padding: 12px 26px;
       font-size: 20px;
       border-radius: 8px;
       border: none;
@@ -42,14 +62,23 @@
   </style>
 </head>
 <body>
-  <h2>คำชี้แจง</h2>
-  <p>
-    วิธีการเล่นง่ายๆเพียงแค่อ่านคำถามแล้วเลือกคำตอบที่ถูกต้องไปเลื่อยจนข้อสุดท้าย 
-    แต่ถ้าตอบผิดคุณจะถูกส่งไปที่ข้อแรกทันที
-  </p>
-  <div class="button-group">
-    <button onclick="startTimer()">เริ่มเกม</button>
-    <button onclick="location.href='index.html'">ย้อนกลับ</button>
+  <div class="container">
+    <div class="box">
+      <h2>คำชี้แจง</h2>
+      <p>
+        เนื้อหาข้อมูลที่เอามาตั้งคำถามเป็นการเอาข้อมูลมาจากไลฟ์ทั่วไปเท่านั้น ไม่มีการเอาเนื้อหาข้อมูลในเมมเบอร์ชิพมา <br>
+        หากมีข้อมูลหรือเนื้อหาข้อมูลไหนผิดพลาดหรือไม่ตรงก็ต้องกราบขออภัยมานะที่นี่
+      </p>
+      <h2>วิธีการเล่น</h2>
+      <p>
+        เพียงแค่อ่านคำถามแล้วเลือกคำตอบที่ถูกต้องไปเลื่อยจนข้อสุดท้าย แต่ถ้าตอบผิดคุณจะถูกส่งไปที่ข้อแรกทันที
+
+      </p>
+      <div class="button-group">
+        <button onclick="startTimer()">เริ่มเกม</button>
+        <button onclick="location.href='index.html'">ย้อนกลับ</button>
+      </div>
+    </div>
   </div>
 
   <script>

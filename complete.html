@@ -3,28 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>ตอบคำถามจบแล้ว</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Tahoma, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: url('BG/BGPJ.jpg') no-repeat center center fixed; 
+      background-size: cover; 
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .box {
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
       text-align: center;
-      margin-top: 80px;
+      font-size: 20px;
     }
     h2 {
       color: #333;
-      font-size: 28px; /* ✅ ขยายหัวข้อ */
+      font-size: 28px;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 22px; /* ✅ ขยายข้อความย่อหน้า */
-      margin: 20px auto;
+      font-size: 22px;
+      margin-bottom: 25px;
     }
     #time {
       font-weight: bold;
-      font-size: 24px; /* ✅ ขยายเวลาที่ใช้ */
-      color: #d9534f;  /* ใช้สีแดงอ่อนเพื่อให้เด่น */
+      font-size: 24px;
+      color: #d9534f;
     }
     button {
       padding: 12px 26px;
-      font-size: 20px; /* ✅ ขยายตัวอักษรบนปุ่ม */
+      font-size: 20px;
       border-radius: 8px;
       border: none;
       background-color: #4CAF50;
@@ -37,7 +59,6 @@
   </style>
   <script>
     window.onload = function() {
-      // อ่านเวลาเริ่มจาก sessionStorage
       let start = sessionStorage.getItem("startTime");
       if (start) {
         let end = new Date().getTime();
@@ -48,8 +69,12 @@
   </script>
 </head>
 <body>
-  <h2>ยินดีด้วยที่ตอบคำถามจนจบแล้ว</h2>
-  <p>เวลาที่ใช้ทำ: <span id="time"></span></p>
-  <button onclick="location.href='index.html'">กลับไปหน้าแรก</button>
+  <div class="container">
+    <div class="box">
+      <h2>🎉 ยินดีด้วยที่ตอบคำถามจนจบแล้ว 🎉</h2>
+      <p>เวลาที่ใช้ทำ: <span id="time"></span></p>
+      <button onclick="location.href='index.html'">กลับไปหน้าแรก</button>
+    </div>
+  </div>
 </body>
 </html>
