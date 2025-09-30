@@ -62,8 +62,16 @@
       let start = sessionStorage.getItem("startTime");
       if (start) {
         let end = new Date().getTime();
-        let diff = Math.floor((end - start) / 1000); // วินาที
-        document.getElementById("time").textContent = diff + " วินาที";
+        let diff = Math.floor((end - start) / 1000); 
+
+        let minutes = Math.floor(diff / 60);
+        let seconds = diff % 60;
+
+        let timeText = minutes > 0 
+          ? minutes + " นาที " + seconds + " วินาที"
+          : seconds + " วินาที";
+
+        document.getElementById("time").textContent = timeText;
       }
     };
   </script>
