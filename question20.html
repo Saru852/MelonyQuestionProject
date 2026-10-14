@@ -66,37 +66,30 @@
   <div class="container">
   <div class="box">
     <h2>คำถามที่ 20</h2>
-    <p>คำถาม: ฉายาที่พวกท่านพี่เรียกเมลมากที่สุดคือ?</p>
-    <form action="complete.html" onsubmit="return checkAnswer()">
-      <label><input type="radio" name="answer" value="wrong" required> เมลเหลี่ยม</label><br>
-      <label><input type="radio" name="answer" value="wrong"> เด็กสถาปัด</label><br>
-      <label><input type="radio" name="answer" value="correct"> เด็กดื้อ</label><br>
-      <label><input type="radio" name="answer" value="wrong"> เด็กติดเกม</label><br><br>
-      <button type="submit" onclick="stopTimer()">ส่งคำตอบ</button>
+    <p>คำถาม: ชื่อน้องแมวทั้ง 2 ตัวของเมลชื่ออะไรบ้าง?</p>
+    <form action="question21.html" onsubmit="return checkAnswer()">
+      <label><input type="radio" name="answer" value="wrong" required> อีมะ/ฟู</label><br>
+      <label><input type="radio" name="answer" value="wrong"> ฮิเมะ/ฟูจิ</label><br>
+      <label><input type="radio" name="answer" value="wrong"> ขาว/แพนด้า</label><br>
+      <label><input type="radio" name="answer" value="correct"> ฮิเมะ/โมจิ</label><br><br>
+      <button type="submit">ถัดไป</button>
     </form>
   </div>
-
   <script>
-    function stopTimer() {
-      const startTime = sessionStorage.getItem('startTime');
-      const endTime = Date.now();
-      const timeSpent = Math.floor((endTime - startTime) / 1000);  
-      sessionStorage.setItem('timeSpent', timeSpent);  
-    }
     function checkAnswer() {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-    if (!selectedAnswer) {
-      return false; 
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (!selectedAnswer) {
+        return false; 
+      }
+  
+      if (selectedAnswer.value === 'wrong') {
+        
+        window.location.href = 'question1.html';
+        return false; 
+      }
+  
+      return true; 
     }
-
-    if (selectedAnswer.value === 'wrong') {
-      
-      window.location.href = 'question1.html';
-      return false; 
-    }
-
-    return true; 
-  }
-</script>
+  </script>  
 </body>
 </html>

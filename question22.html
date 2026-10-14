@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำถามที่ 22</title>
+  <style>
+  body {
+      font-family: 'Arial', sans-serif;
+      background: url('BG/BGPJ.jpg') no-repeat center center fixed; 
+      background-size: cover; 
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .box {
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: left; 
+      font-size: 20px;  
+    }
+    h2 {
+      text-align: center; 
+      font-size: 26px; 
+    }
+    p {
+      font-size: 25px; 
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      font-size: 23px; 
+    }
+    button {
+      padding: 14px 24px;
+      font-size: 20px; 
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="box">
+    <h2>คำถามที่ 22</h2>
+    <p>คำถาม: เกมที่เมลชอบเล่นคือ?</p>
+    <form action="question23.html" onsubmit="return checkAnswer()">
+      <label><input type="radio" name="answer" value="wrong" required> Slap'em UP!</label><br>
+      <label><input type="radio" name="answer" value="wrong"> NIKKE</label><br>
+      <label><input type="radio" name="answer" value="correct"> talesrunner</label><br>
+      <label><input type="radio" name="answer" value="wrong"> Heartopia</label><br><br>
+      <button type="submit">ถัดไป</button>
+    </form>
+  </div>
+  <script>
+    function checkAnswer() {
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (!selectedAnswer) {
+        return false; 
+      }
+  
+      if (selectedAnswer.value === 'wrong') {
+        
+        window.location.href = 'question1.html';
+        return false; 
+      }
+  
+      return true; 
+    }
+  </script>  
+</body>
+</html>
